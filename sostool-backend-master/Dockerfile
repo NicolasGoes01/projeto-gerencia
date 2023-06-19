@@ -1,5 +1,5 @@
 # Use uma imagem do Java 11 com maven
-FROM maven:3.6.3-jdk-11
+FROM eclipse-temurin:20-jdk-alpine
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
