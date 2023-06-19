@@ -21,8 +21,5 @@ RUN mvn package
 # Expõe a porta em que a aplicação vai rodar (de acordo com sua configuração)
 EXPOSE 8081
 
-RUN chmod +x mvnw
-RUN ./mvnw package -Dmaven.test.skip
-
 # Define o comando a ser executado quando o contêiner for iniciado
 CMD ["java", "-jar", "target/sostool-backend-0.0.1-SNAPSHOT.jar"]
