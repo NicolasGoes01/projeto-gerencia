@@ -20,4 +20,4 @@ jobs:
           sostool-frontend
           sostool-backend
     - name: Test
-      run: docker exec backend ./mvnw package
+      run: docker exec backend ./mvnw test
