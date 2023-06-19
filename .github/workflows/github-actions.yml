@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Build
+      uses: isbang/compose-action@v1.4.1
+      with:
+        compose-file: "./docker-compose.yml"
+        services: |
+          sostool-frontend
+          sostool-backend
+    - name: Test
+      run: docker exec backend_dc ./mvnw test
