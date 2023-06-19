@@ -3,7 +3,7 @@ services:
     container_name: frontend
     build: ./sostool-frontend-master
     volumes:
-      - ./sostool-frontend/src:/frontend/src
+      - ./sostool-frontend-master/src:/sostool-frontend/src
     ports:
       - 127.0.0.1:4200:4200
 
