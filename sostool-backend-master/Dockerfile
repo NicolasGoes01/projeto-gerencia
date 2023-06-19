@@ -16,7 +16,7 @@ COPY src ./src
 
 RUN chmod +x mvnw
 # Executa o comando 'mvn package' para compilar a aplicação e criar um pacote JAR
-RUN mvn package -DskipTests
+RUN ./mvnw package -DskipTests
 
 # Expõe a porta em que a aplicação vai rodar (de acordo com sua configuração)
 EXPOSE 8081
