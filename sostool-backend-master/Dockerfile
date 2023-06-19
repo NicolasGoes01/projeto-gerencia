@@ -1,5 +1,5 @@
 # Use uma imagem do Java 11 com maven
-FROM openjdk:11.0.11-jre-slim
+FROM openjdk:11-jdk-slim-sid
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
