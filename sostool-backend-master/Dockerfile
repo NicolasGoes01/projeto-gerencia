@@ -1,4 +1,4 @@
-FROM eclipse-temurin:20-jdk-alpine
+FROM maven:3.6.3-jdk-11
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
@@ -15,7 +15,7 @@ COPY src ./src
 
 RUN chmod +x mvnw
 # Executa o comando 'mvn package' para compilar a aplicação e criar um pacote JAR
-RUN ./mvnw package -DskipTests
+RUN mvn package
 
 # Expõe a porta em que a aplicação vai rodar (de acordo com sua configuração)
 EXPOSE 8081
